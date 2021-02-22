@@ -9,7 +9,7 @@ import os
 TODO
 - scrape multiple pages 
 - store html file from the links 
-- hadle if atHome.de tries to block python script'''
+- handle if atHome.de tries to block python script'''
 
 # returns a list for apartment, usage to get to new website where we find infomation about particular apartment
 def get_apartment_links(apartment_links):
@@ -69,7 +69,7 @@ def make_dic(keys, values):
     return data
 
 
-def main():
+def main(apartment_no, page):
 	# Pretending to be the browser
 	header = {
 	    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'}
@@ -81,23 +81,23 @@ def main():
 	    'q': 'd5f74ae0',
 	    'loc': 'L4-berlin',
 	    'ptypes': 'flat',
-	    'pages': "1"
+	    'pages': ""
 	}
 
-
+	payload['pages'] = str(page)
 	response = requests.get("https://www.athome.de/en/srp/?", headers=header, params=payload)
+	# Test
+	print(response.url)
+	# -------
 	soup = BeautifulSoup(response.text, 'lxml')
 	apartment_links = soup.find_all('a')
 	link_to_apartments = get_apartment_links(apartment_links)
 	contents = get_content_of_apartment(link_to_apartments)
 
 
-	# In[460]:
-
 
 	# each apartment information is stored in a separate json file
 	# inlcude cases if key is not present
-	apartment_no = 1
 	for content in contents:
 	    # for one apartment
 	    keys = []
@@ -112,12 +112,26 @@ def main():
 	    data = make_dic(keys, values)
 	    store_output('./apartment_data', f'apartment{apartment_no}', data)
 	    apartment_no += 1
+	    print(f'apartment_no: {apartment_no}')
+	    
+
+	# after 30 apartments wait for 10 seconds and go on with process
+	if(apartment_no % 30 == 0):
+		time.sleep(10)
+	# wait for 2 seconds    
+	time.sleep(2)
+	return apartment_no
 
 
-
+sites = 43
+page = 1 
+apartment_no = 1
 if __name__ == '__main__':
 	print("Start scraping...")
-	main()
+	for _ in range(sites):
+		apartment_no = main(apartment_no, page)
+		apartment_no += 1
+		page = page + 1
 	print("Scraping finished.")
 
 
