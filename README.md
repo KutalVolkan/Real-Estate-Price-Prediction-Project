@@ -22,3 +22,6 @@ After above three-steps the data preparation part should be done, which accordin
 - Our base model will be Linear Regression
 - We will use k-fold Cross-Validation to measure accuracy of our Linear Regression model
 - Finding the best model via GridSearchCV
+
+
+### Note: Feature Engineering and Model Building code should be uploaded until 1.March 2021
