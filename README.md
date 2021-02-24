@@ -24,7 +24,7 @@ After above three-steps the data preparation part should be done, which accordin
 - Finding the best model via GridSearchCV
 
 
-## Libaries we will use
+## Libraries we will use
 - BeautifulSoup
 - requests
 - re
