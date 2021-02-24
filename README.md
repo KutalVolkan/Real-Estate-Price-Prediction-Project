@@ -34,4 +34,4 @@ After above three-steps the data preparation part should be done, which accordin
 - matplotlib 
 - sklearn
 
-### Note: Feature Engineering and Model Building code should be uploaded until 1.March 2021
+### Note: Feature Engineering and Model Building code will be uploaded until 1.March 2021
