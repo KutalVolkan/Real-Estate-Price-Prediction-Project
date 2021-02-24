@@ -16,7 +16,7 @@ This project is to give you a first glance in the day of a full stack data scien
 ## Feature Engineering
 - In the third step we will do some Feature Engineering like One-Hot Encoding, Handling Outliers, and Dimensionality Reduction etc.
 
-After above three-steps the data preparation part should be done, which according to Forbes takes about 80% of the work of a data scientists.
+After above three-steps the data preparation part should be done, which according to Forbes takes about 80% of the work of a data scientist.
 
 ## Build a Model, measuring accuracy, and finding best model
 - Our base model will be Linear Regression
