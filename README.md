@@ -1,7 +1,7 @@
 # Project Description
 
 Hello this project is to give you a first glance in the day of a full stack data scientist. Steps we do:
-- First, scrape all houses information you can get from the website '''https://www.athome.de/en/'''. We limit ourselves to following features:
+- First, scrape all houses information you can get from the website ```https://www.athome.de/en/```. We limit ourselves to following features:
   -  sales price
   -  living surface
   -  land
