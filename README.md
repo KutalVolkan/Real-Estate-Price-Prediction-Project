@@ -24,4 +24,14 @@ After above three-steps the data preparation part should be done, which accordin
 - Finding the best model via GridSearchCV
 
 
+## Libaries we will use
+- BeautifulSoup
+- requests
+- re
+- os
+- csv
+- pandas
+- matplotlib 
+- sklearn
+
 ### Note: Feature Engineering and Model Building code should be uploaded until 1.March 2021
