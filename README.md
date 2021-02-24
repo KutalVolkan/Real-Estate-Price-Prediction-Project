@@ -1,6 +1,8 @@
 # Project Description
 
 Hello this project is to give you a first glance in the day of a full stack data scientist. Steps we do:
+
+## Scrape Data
 - First, scrape all houses information you can get from the website ```https://www.athome.de/en/```. We limit ourselves to following features:
   -  sales price
   -  living surface
@@ -8,5 +10,10 @@ Hello this project is to give you a first glance in the day of a full stack data
   -  number of rooms 
   -  location
 
+## Cleanining Data
 - Second, cleaning all the data including NaN values, formatting etc. 
-- In the third step we will do some feature engineering like One-Hot Encoding and Handling Outliers etc. It depends all on the data we have.
+
+## Feature Engineering
+- In the third step we will do some Feature Engineering like One-Hot Encoding, Handling Outliers, and Dimensionality Reductionetc. It depends all on the data we have.
+
+After above three-steps the data preparation part should be done, which according to Forbes takes about 80% of the work of data scientists.
